@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <p>My Family Book</p>
+        <br>
+        <img src="depositphotos_97745682-stock-illustration-happy-family-portrait.jpg"
+        style="width: 30%;" id="family_member_img">
+        <h4 id="family_member_name"></h4>
+
+        <button onclick="update()">Next</button>
+       <script>
+           var images = ["Momi.jpg" , "Daddy.jpg" , "download.png" , "Navya.jpg"]
+
+           var names =["Alka Khandelwal" , "Vivek Khandelawal" , "Nimish Khandelwal" ,
+            "Navya Khandewal (Me)"]
+
+            var i=0;
+            function update()
+            {
+                i++;
+                var num_of_familymembers_in_family_array = 4
+                if(i > num_of_familymembers_in_family_array)
+                {
+                    i = 0
+                }
+
+                var updatedimg = images[i];
+                var updatedName = names[i];
+                document.getElementById("family_member_img").src = updatedimg;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+
+            }
+
+       </script>
+    </body>
+</html>
